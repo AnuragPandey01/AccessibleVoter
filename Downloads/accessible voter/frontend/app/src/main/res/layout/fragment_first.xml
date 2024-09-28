@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:fillViewport="true"
+    tools:context=".ui.home.FirstFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KYV"
+            android:textColor="@color/primary_blue"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We require some basic info so that the government official can authenticate you"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Aadhar number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aadhar_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="aadhar number"
+                android:imeOptions="actionDone"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="mobile number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:contentDescription="phone input"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Full name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:contentDescription="name input"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/clickImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="30dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/dashed_stroke" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:contentDescription="photo input"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="camera button"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="click a photo"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/browse_to_choose_a_file"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="16sp" />-->
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/imagePreviewLayout"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="200dp"
+            android:layout_marginBottom="30dp">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp">
+                <ImageView
+                    android:id="@+id/imagePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/closeImageButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                app:iconPadding="0dp"
+                app:iconGravity="textStart"
+                android:backgroundTint="@color/primary_blue"
+                app:icon="@drawable/ic_close"
+                app:iconSize="18sp" />
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/generateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Confirm details"
+            app:backgroundTint="@color/primary_blue"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
